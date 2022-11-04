@@ -1,0 +1,15 @@
+
+
+.choices {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.options {
+    flex-basis: 12%;
+    margin: 0 2rem;
+    border: 1px dashed dodgerblue;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0.25rem 0.25rem 0.5rem rgb(143, 143, 143);
+}
