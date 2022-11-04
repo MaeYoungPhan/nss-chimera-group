@@ -29,9 +29,9 @@ const database = {
       { id: 4, name: "Praying Mantis", price: 0.09, hasFingers: false }
     ],
     powers: [
-      { id: 1, size: "Lightning Breath" },
-      { id: 2, size: "Ice Breath" },
-      { id: 3, size: "Fire Breath" }
+      { id: 1, size: "Lightning Breath", price: .5 },
+      { id: 2, size: "Ice Breath", price: .5 },
+      { id: 3, size: "Fire Breath", price: .5 }
     ],
     chimeraOrders: [
         {
@@ -100,22 +100,22 @@ export const setPower = (id) => {
     database.orderBuilder.powerId = id
 }
 
-// export const addCustomOrder = () => {
-//     // Copy the current state of user choices
-//     const newOrder = {...database.orderBuilder}
+export const addCustomOrder = () => {
+    // Copy the current state of user choices
+    const newOrder = {...database.orderBuilder}
 
-//     // Add a new primary key to the object
-//     const lastIndex = database.customOrders.length - 1
-//     newOrder.id = database.customOrders[lastIndex].id + 1
+    // Add a new primary key to the object
+    const lastIndex = database.chimeraOrders.length - 1
+    newOrder.id = database.chimeraOrders[lastIndex].id + 1
 
-//     // Add a timestamp to the order
-//     newOrder.timestamp = Date.now()
+    // Add a timestamp to the order
+    newOrder.timestamp = Date.now()
 
-//     // Add the new order object to custom orders state
-//     database.customOrders.push(newOrder)
+    // Add the new order object to custom orders state
+    database.chimeraOrders.push(newOrder)
 
-//     // Reset the temporary state for user choices
-//     database.orderBuilder = {}
+    // Reset the temporary state for user choices
+    database.orderBuilder = {}
 
-//     // Broadcast a notification that permanent state has changed
-//     document.dispatchEvent(new CustomEvent("stateChanged"))}
+    // Broadcast a notification that permanent state has changed
+    document.dispatchEvent(new CustomEvent("stateChanged"))}

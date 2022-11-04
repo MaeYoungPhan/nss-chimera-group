@@ -1,4 +1,4 @@
-import { getHeads, setHeads } from "./database.js"
+import { getHeads, setHead } from "./database.js"
 
 
 const heads = getHeads()
@@ -8,7 +8,7 @@ document.addEventListener(
     "change",
     (event) => {
         if (event.target.name === "head") {
-            setHeads(parseInt(event.target.value))
+            setHead(parseInt(event.target.value))
         }
     }
 )

@@ -1,20 +1,18 @@
 import {pickArms} from "./arms.js"
 import {headStyles} from "./heads.js"
 import {pickLegs} from "./legs.js"
-import {chimeraPowers} from "./arms.js"
+import {chimeraPowers} from "./powers.js"
 import {pickTails} from "./tails.js"
 import {pickTorso} from "./torsos.js"
-import {orders} from "./orders.js"
+import {Orders} from "./orders.js"
 import {addCustomOrder} from "./database.js"
 
 document.addEventListener(
     "click",
     (event) => {
-        const itemClicked = event.target;
-        if(itemClicked.id === "orderButton"){
+        if (event.target.id === "orderButton") {
             addCustomOrder()
         }
-
     }
 )
 
@@ -25,39 +23,39 @@ export const chimera = () => {
 
     <article class="choices">
         <section class="choices__arms options">
-            <h2>arms</h2>
+            <h2>Arms</h2>
             ${pickArms()}
         </section>
-        <section class="choices__sizes options">
-            <h2>Sizes</h2>
-            ${s()}
+        <section class="choices__heads options">
+            <h2>Heads</h2>
+            ${headStyles()}
         </section>
-        <section class="choices__styles options">
-            <h2>Styles</h2>
-            ${JewelryStyles()}
+        <section class="choices__legs options">
+            <h2>Legs</h2>
+            ${pickLegs()}
         </section>
-        <section class="choices__metals options">
-            <h2></h2>
-            ${()}
+        <section class="choices__powers options">
+            <h2>Powers</h2>
+            ${chimeraPowers()}
         </section>
-        <section class="choices__sizes options">
-            <h2>Sizes</h2>
-            ${DiamondSizes()}
+        <section class="choices__tails options">
+            <h2>Tails</h2>
+            ${pickTails()}
         </section>
-        <section class="choices__styles options">
-            <h2>Styles</h2>
-            ${JewelryStyles()}
+        <section class="choices__torsos options">
+            <h2>Torsos</h2>
+            ${pickTorso()}
         </section>
 
 
     </article>
 
     <article>
-        <button id="orderButton">Create Custom Order</button>
+        <button id="orderButton">Build Your Chimera!</button>
     </article>
 
-    <article class="customOrders">
-        <h2>Custom Jewelry Orders</h2>
+    <article class="orders">
+        <h2>Chimeras</h2>
         ${Orders()}
     </article>`
 

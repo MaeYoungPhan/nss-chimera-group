@@ -1,11 +1,11 @@
-import { getTorsos, setTorsos } from "./database.js";
+import { getTorsos, setTorso } from "./database.js";
 
 const torsos = getTorsos();
 
 document.addEventListener(
     "change", (event) => { 
         if (event.target.name === "torso"){
-            setTorsos(parseInt(event.target.value))
+            setTorso(parseInt(event.target.value))
             
         }
     }

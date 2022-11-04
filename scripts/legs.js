@@ -1,11 +1,11 @@
-import { getLegs, setLegs } from "./database.js";
+import { getLegs, setLeg } from "./database.js";
 
 const legs = getLegs();
 
 document.addEventListener(
     "change", (event) => { 
         if (event.target.name === "leg"){
-            setLegs(parseInt(event.target.value))
+            setLeg(parseInt(event.target.value))
         }
     }
 )
