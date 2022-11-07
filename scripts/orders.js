@@ -1,14 +1,19 @@
 import { getOrders, getArms, getHeads, getLegs, getPowers, getTails, getTorsos } from "./database.js"
 
+const arms = getArms();
+const heads = getHeads();
+const legs = getLegs();
+const tails = getTails();
+const power = getPowers();
+const torsos = getTorsos();
+
 const buildOrderListItem = (order) => {
 
-    const arms = getArms();
     const findArms = arms.find(
         (arm) => {
             return arm.id === order.armId;})
             let totalCost = findArms.price
 
-    const heads = getHeads();
     const findHeads = heads.find(
         (head) => {
             return head.id === order.headId;
@@ -16,7 +21,6 @@ const buildOrderListItem = (order) => {
     )
     totalCost += findHeads.price
 
-    const legs = getLegs();
     const findLegs = legs.find(
         (leg) => {
             return leg.id === order.legId;
@@ -24,7 +28,6 @@ const buildOrderListItem = (order) => {
     )
     totalCost += findLegs.price
 
-    const tails = getTails();
     const findTails = tails.find(
         (tail) => {
             return tail.id === order.tailId;
@@ -32,7 +35,6 @@ const buildOrderListItem = (order) => {
     )
     totalCost += findTails.price
 
-    const power = getPowers();
     const findPowers = power.find(
         (power) => {
             return power.id === order.powerId;
@@ -40,7 +42,6 @@ const buildOrderListItem = (order) => {
     )
     totalCost += findPowers.price
 
-    const torsos = getTorsos();
     const findTorsos = torsos.find(
         (torso) => {
             return torso.id === order.torsoId;
