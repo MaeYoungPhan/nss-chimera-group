@@ -4,7 +4,7 @@ const arms = getArms();
 const heads = getHeads();
 const legs = getLegs();
 const tails = getTails();
-const power = getPowers();
+const powers = getPowers();
 const torsos = getTorsos();
 
 const buildOrderListItem = (order) => {
@@ -35,7 +35,7 @@ const buildOrderListItem = (order) => {
     )
     totalCost += findTails.price
 
-    const findPowers = power.find(
+    const findPowers = powers.find(
         (power) => {
             return power.id === order.powerId;
         }

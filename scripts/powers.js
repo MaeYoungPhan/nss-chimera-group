@@ -17,7 +17,7 @@ export const chimeraPowers = () => {
     const powerArray = powers.map(
         (power) => {
             return `<li>
-            <input type="radio" name="style" value="${power.id}" /> ${power.size}
+            <input type="radio" name="power" value="${power.id}" /> ${power.size}
         </li>`
         }
     )

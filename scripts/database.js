@@ -29,9 +29,9 @@ const database = {
       { id: 4, name: "Praying Mantis", price: 0.09, hasFingers: false }
     ],
     powers: [
-      { id: 1, size: "Lightning Breath", price: .5 },
-      { id: 2, size: "Ice Breath", price: .5 },
-      { id: 3, size: "Fire Breath", price: .5 }
+      { id: 1, size: "Lightning Breath", price: 0.5 },
+      { id: 2, size: "Ice Breath", price: 0.5 },
+      { id: 3, size: "Fire Breath", price: 0.5 }
     ],
     chimeraOrders: [
         {
