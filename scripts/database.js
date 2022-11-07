@@ -46,7 +46,7 @@ const database = {
         }
     ],
     orderBuilder: {},
-  };
+}
   
   export const getHeads = () => {
     return database.heads.map(head => ({...head}))

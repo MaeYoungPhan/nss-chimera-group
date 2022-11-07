@@ -17,7 +17,7 @@ export const pickTails = () => {
         (tail) => {
             return `
             <li>
-                <input type="radio" name="arm" value="${tail.id}" /> ${tail.name}
+                <input type="radio" name="tail" value="${tail.id}" /> ${tail.name}
             </li>`
         }
     )
